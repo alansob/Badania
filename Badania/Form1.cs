@@ -17,5 +17,9 @@ namespace Badania
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label4.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
     }
 }
