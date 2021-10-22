@@ -34,8 +34,9 @@ namespace Badania
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.time = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -79,15 +80,16 @@ namespace Badania
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 4;
             // 
-            // label4
+            // date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(662, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 28);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.date.AllowDrop = true;
+            this.date.AutoSize = true;
+            this.date.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.date.Location = new System.Drawing.Point(637, 35);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(63, 28);
+            this.date.TabIndex = 5;
+            this.date.Text = "Data ";
             // 
             // dateTimePicker1
             // 
@@ -97,13 +99,24 @@ namespace Badania
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 6;
             // 
+            // time
+            // 
+            this.time.AutoSize = true;
+            this.time.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.time.Location = new System.Drawing.Point(637, 124);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(82, 25);
+            this.time.TabIndex = 7;
+            this.time.Text = "Godzina";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.time);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -124,8 +137,9 @@ namespace Badania
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label date;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label time;
     }
 }
 
