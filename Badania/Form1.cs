@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace Badania
 {
+    public class Pacjent
+    {
+        public Pacjent Następny;
+        public object Value;
+    }
+
     public partial class Form1 : Form
     {
         public Form1()
