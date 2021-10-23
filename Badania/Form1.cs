@@ -25,11 +25,13 @@ namespace Badania
             timer1.Start();
         }
 
+        //aktualny czas
         private void timer1_Tick(object sender, EventArgs e)
         {
-            time.Text = DateTime.Now.ToString("HH:mm");
+            time.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
+        //messageBoxy
         private void button_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "")

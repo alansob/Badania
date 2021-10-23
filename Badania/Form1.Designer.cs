@@ -114,13 +114,14 @@ namespace Badania
             // 
             // timer1
             // 
+            this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button
             // 
-            this.button.Location = new System.Drawing.Point(195, 189);
+            this.button.Location = new System.Drawing.Point(195, 188);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(72, 23);
+            this.button.Size = new System.Drawing.Size(100, 40);
             this.button.TabIndex = 8;
             this.button.Text = "Zatwierdź";
             this.button.UseVisualStyleBackColor = true;
