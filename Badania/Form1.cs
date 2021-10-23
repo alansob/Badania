@@ -21,7 +21,13 @@ namespace Badania
         {
             date.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-            time.Text = DateTime.Now.ToString("hh/mm/ss");
+            //time.Text = DateTime.Now.ToString("HH/mm/ss");
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time.Text = DateTime.Now.ToString("HH:mm");
         }
     }
 }

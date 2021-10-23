@@ -29,6 +29,7 @@ namespace Badania
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@ namespace Badania
             this.date = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.time = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +87,7 @@ namespace Badania
             this.date.AllowDrop = true;
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.date.Location = new System.Drawing.Point(637, 35);
+            this.date.Location = new System.Drawing.Point(578, 27);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(63, 28);
             this.date.TabIndex = 5;
@@ -103,11 +105,15 @@ namespace Badania
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.time.Location = new System.Drawing.Point(637, 124);
+            this.time.Location = new System.Drawing.Point(477, 30);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(82, 25);
             this.time.TabIndex = 7;
             this.time.Text = "Godzina";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -140,6 +146,7 @@ namespace Badania
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
