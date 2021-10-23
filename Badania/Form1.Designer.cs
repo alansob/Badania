@@ -39,6 +39,7 @@ namespace Badania
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,11 +116,22 @@ namespace Badania
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button
+            // 
+            this.button.Location = new System.Drawing.Point(195, 189);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(72, 23);
+            this.button.TabIndex = 8;
+            this.button.Text = "Zatwierdź";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.time);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.date);
@@ -147,6 +159,7 @@ namespace Badania
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button;
     }
 }
 

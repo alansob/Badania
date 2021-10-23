@@ -29,5 +29,18 @@ namespace Badania
         {
             time.Text = DateTime.Now.ToString("HH:mm");
         }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Potrzebne jest twoje imię", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Wypełnij cały formularz!", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
