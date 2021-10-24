@@ -32,7 +32,6 @@ namespace Badania
             time.Text = DateTime.Now.ToString("HH:mm");
         }
 
-        //messageBoxy
         private void button_Click(object sender, EventArgs e)
         {
             bool isOpen = false;
@@ -52,19 +51,33 @@ namespace Badania
                 Form2 form = new Form2();
                 form.Show();
             }
-
             Form2.instance.lab1.Text = textBox1.Text;
             Form2.instance.lab5.Text = textBox2.Text;
             Form2.instance.lab6.Text = dateTimePicker1.Text;
 
-            if (textBox1.Text == "")
+            string I = textBox1.Text;
+            string B = textBox2.Text;
+            string D = dateTimePicker1.Text;
+
+            Form2.instance.lab1.Text = I + ", " + B + "   " + D;
+
+            if(textBox1.Text == "")
             {
-                MessageBox.Show("Potrzebne jest twoje imię", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isOpen = true;
+            }
+        }
+
+        //Sprawdzenie danych
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola!", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            if (textBox2.Text == "")
+            if (textBox1.Text != "" && textBox2.Text != "")
             {
-                MessageBox.Show("Wypełnij cały formularz!", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Dane się zgadzają", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

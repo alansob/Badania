@@ -40,6 +40,7 @@ namespace Badania
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -119,7 +120,7 @@ namespace Badania
             // 
             // button
             // 
-            this.button.Location = new System.Drawing.Point(195, 188);
+            this.button.Location = new System.Drawing.Point(267, 184);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(100, 40);
             this.button.TabIndex = 8;
@@ -127,11 +128,22 @@ namespace Badania
             this.button.UseVisualStyleBackColor = true;
             this.button.Click += new System.EventHandler(this.button_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(161, 184);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Sprawdź dane";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button);
             this.Controls.Add(this.time);
             this.Controls.Add(this.dateTimePicker1);
@@ -161,6 +173,7 @@ namespace Badania
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button button1;
     }
 }
 
