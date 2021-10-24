@@ -70,12 +70,11 @@ namespace Badania
         //Sprawdzenie danych
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "")
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 MessageBox.Show("Uzupełnij wszystkie pola!", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            if (textBox1.Text != "" && textBox2.Text != "")
+            else
             {
                 MessageBox.Show("Dane się zgadzają", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
