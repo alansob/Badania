@@ -23,6 +23,7 @@ namespace Badania
 
         }
 
+        //nie mozna otworzyc formow kilka razy
         private void button1_Click(object sender, EventArgs e)
         {
             bool isOpen = false;
@@ -41,6 +42,7 @@ namespace Badania
             }
         }
 
+        //Import z pliku .txt, działa
         private void button2_Click(object sender, EventArgs e)
         {
             string[] lines = File.ReadAllLines(@"C:\Users\Alan\Desktop\kolejka.txt");
@@ -48,7 +50,7 @@ namespace Badania
 
             for (int i = 0; i < lines.Length; i++)
             {
-                values = lines[i].ToString().Split('/');
+                values = lines[i].ToString().Split('|');
                 string[] row = new string[values.Length];
 
                 for (int j = 0; j < values.Length; j++)
@@ -59,9 +61,20 @@ namespace Badania
             }
         }
 
+        //Eksport do pliku .txt, działa
         private void button3_Click(object sender, EventArgs e)
         {
-            TextWriter writer = new StreamWriter(@'')
+            TextWriter writer = new StreamWriter(@"C:\Users\Alan\Desktop\kolejka.txt");
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                for(int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                }
+                writer.WriteLine("|");
+            }
+            writer.Close();
+            MessageBox.Show("Eksport udany", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

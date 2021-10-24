@@ -38,6 +38,7 @@ namespace Badania
         {
             F2.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, dateTimePicker1.Text);
 
+            //nie mozna otworzyc formow kilka razy
             bool isOpen = false;
             foreach (Form f in Application.OpenForms)
             {
@@ -51,7 +52,6 @@ namespace Badania
 
             if (isOpen == false)
             {
-                //otwarcie Forma 2
                 Form2 form = new Form2();
                 form.Show();
             }
@@ -75,6 +75,7 @@ namespace Badania
             }
         }
 
+        // usuwanie z kolejki 
         private void button2_Click(object sender, EventArgs e)
         {
             int rowIndex = F2.dataGridView1.CurrentCell.RowIndex;
