@@ -12,11 +12,13 @@ namespace Badania
 {
     public partial class Form1 : Form
     {
+        Form2 F2;
         public static Form1 instance;
-        public Form1()
+        public Form1(Form2 f2)
         {
             InitializeComponent();
             instance = this;
+            this.F2 = f2;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,6 +36,8 @@ namespace Badania
 
         private void button_Click(object sender, EventArgs e)
         {
+            F2.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, dateTimePicker1.Text);
+
             bool isOpen = false;
             foreach (Form f in Application.OpenForms)
             {
@@ -51,7 +55,7 @@ namespace Badania
                 Form2 form = new Form2();
                 form.Show();
             }
-            Form2.instance.lab1.Text = textBox1.Text;
+          /*  Form2.instance.lab1.Text = textBox1.Text;
             Form2.instance.lab5.Text = textBox2.Text;
             Form2.instance.lab6.Text = dateTimePicker1.Text;
 
@@ -59,7 +63,7 @@ namespace Badania
             string B = textBox2.Text;
             string D = dateTimePicker1.Text;
 
-            Form2.instance.lab1.Text = I + ", " + B + "   " + D;
+            Form2.instance.lab1.Text = I + ", " + B + "   " + D;*/
 
             if(textBox1.Text == "")
             {
