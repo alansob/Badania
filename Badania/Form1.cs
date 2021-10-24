@@ -55,15 +55,6 @@ namespace Badania
                 Form2 form = new Form2();
                 form.Show();
             }
-          /*  Form2.instance.lab1.Text = textBox1.Text;
-            Form2.instance.lab5.Text = textBox2.Text;
-            Form2.instance.lab6.Text = dateTimePicker1.Text;
-
-            string I = textBox1.Text;
-            string B = textBox2.Text;
-            string D = dateTimePicker1.Text;
-
-            Form2.instance.lab1.Text = I + ", " + B + "   " + D;*/
 
             if(textBox1.Text == "")
             {
@@ -74,7 +65,7 @@ namespace Badania
         //Sprawdzenie danych
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 MessageBox.Show("Uzupełnij wszystkie pola!", "Błędne dane", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -82,6 +73,12 @@ namespace Badania
             {
                 MessageBox.Show("Dane się zgadzają", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int rowIndex = F2.dataGridView1.CurrentCell.RowIndex;
+            F2.dataGridView1.Rows.RemoveAt(rowIndex);
         }
     }
 }
