@@ -12,6 +12,75 @@ namespace Badania
 {
     public partial class Form1 : Form
     {
+        //poprawa kolejki, nie działa w pełni
+        public class Badany
+        {
+            public Badany Next;
+            public string Imie { get; set; }
+            public string nazwaBadania { get; set; }
+            public string dataBadania { get; set; }
+
+            public Badany(string sImie, string sNazwaBadania, string sDataBadania)
+            {
+                Imie = sImie;
+                nazwaBadania = sNazwaBadania;
+                dataBadania = sDataBadania;
+            }
+        }
+
+        public class ListaBadanych
+        {
+            private Badany head;
+            private Badany current;
+            public int Count;
+
+            public ListaBadanych()
+            {
+                head = null;
+                current = head;
+                Count = 0;
+            }
+
+            public void AddPatient(string sImie, string sNazwaBadania, string sDataBadania)
+            {
+                Badany newBadany = new Badany(sImie, sNazwaBadania, sDataBadania);
+                newBadany.Next = null;
+                if (head == null)
+                {
+                    head = newBadany;
+                }
+                if (current == null)
+                {
+                    current = newBadany;
+                }
+                else
+                {
+                    current.Next = newBadany;
+                    current = newBadany;
+                }
+                Count++;
+            }
+
+
+            public void DeletePatient(string sImie, string sNazwaBadania, string sDataBadania)
+            {
+                Badany temp = head;
+                Badany p;
+
+                do
+                {
+                    if (temp.Imie == sImie && temp.nazwaBadania == sNazwaBadania && temp.dataBadania == sDataBadania)
+                    {
+                        p = head;
+                        head = head.Next;
+                        p.Next = null;
+                        return;
+                    }
+                    temp = temp.Next;
+                } while (temp.Next == null);
+            }
+        }
+
         Form2 F2;
         public static Form1 instance;
         public Form1(Form2 f2)
