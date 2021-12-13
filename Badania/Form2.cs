@@ -74,7 +74,7 @@ namespace Badania
                 writer.WriteLine("|");
             }
             writer.Close();
-            MessageBox.Show("Eksport udany", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Eksport udany", "komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
     }
 }
